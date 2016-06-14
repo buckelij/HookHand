@@ -2,6 +2,8 @@ require "rack/request"
 require "rack/response"
 require "json"
 require "awesome_print" if ENV["RACK_ENV"] == "development"
+require "pathname"
+require "bundler"
 
 # Let's timeout by default after 25s as e.g. Heroku times out after 30s.
 DEFAULT_REQUEST_TIMEOUT = 25
